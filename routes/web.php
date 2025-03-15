@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListProdukController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/listproduk/{id}/{nama}/{harga}', function ($id, $nama, $harga) {
-    return view('list_produk', compact('id', 'nama', 'harga'));
-});
+Route::get('/listproduk/{id}/{nama}/{harga}', [ListProdukController::class, 'tampilkan']);
