@@ -10,3 +10,7 @@ Route::get('/', function () {
     //return view('Login', compact('username', 'password'));
 //});
 Route::get('/Login/{username}/{password}', [LoginController::class, 'tampilkan']);
+
+Route::get('/spoduct', function () {
+    return view('spoduct');
+});
